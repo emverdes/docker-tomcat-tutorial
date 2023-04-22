@@ -5,6 +5,7 @@ A basic tutorial on running a web app on Tomcat using Podman (based on a docker 
 * Install [podman] (https://podman.io/getting-started/installation).
 * Clone this repository - $git clone https://github.com/emverdes/docker-tomcat-tutorial.git
 * cd 'docker-tomcat-tutorial'
+* Verify Tomcat download URL from https://dlcdn.apache.org/tomcat/ to update the Dockerfile
 * $podman build -t tomcat-demo:1 .
 * $podman run -p 8008:8080 --name demo1 tomcat-demo:1
 * http://localhost:8008
