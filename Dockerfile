@@ -6,7 +6,7 @@ RUN dnf install -y java-1.8.0-openjdk && yum clean all
 
 RUN mkdir /opt/tomcat
 
-RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.76/bin/apache-tomcat-8.5.76.tar.gz && tar xvfz apache*.tar.gz && mv apache-tomcat-8.5.76/* /opt/tomcat/.
+RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.88/bin/apache-tomcat-8.5.88.tar.gz && tar xvfz apache*.tar.gz && mv apache-tomcat-8.5.76/* /opt/tomcat/.
 
 ADD sample.war /opt/tomcat/webapps/
 
