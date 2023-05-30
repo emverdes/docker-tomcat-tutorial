@@ -11,7 +11,14 @@ A basic tutorial on running a web app on Tomcat using Podman (based on a docker 
 * http://localhost:8008
 * Run another instance for load balancing $podman run -p 8009:8080 --name demo1 tomcat-demo:1
 
-# Apache proxy loadbalancer
+# Simple apache reverse proxy
+
+```
+ProxyPass "/"  "http://localhost:8008/sample"
+ProxyPassReverse "/"  "http://localhost:8008/sample"
+```
+
+# Apache proxy loadbalancer for 2 containers
 ```
 <Proxy "balancer://mycluster">
     BalancerMember "http://localhost:8008/sample"
