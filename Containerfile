@@ -9,4 +9,4 @@ RUN dnf install -y java-11-openjdk tomcat && \
 ADD sample.war /var/lib/tomcat/webapps/
 
 EXPOSE 8080
-CMD ["/usr/libexec/tomcat/server start", "start"]
+CMD ["/usr/libexec/tomcat/server", "start"]
